@@ -1,106 +1,219 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Homeland by huacnlee</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <title>Homeland by huacnlee</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Homeland</h1>
-        <p>以 Rails Engine 的方式的嵌入式论坛组件</p>
+    <div id="container">
+      <div class="inner">
 
-        <p class="view"><a href="https://github.com/huacnlee/homeland">View the Project on GitHub <small>huacnlee/homeland</small></a></p>
+        <header>
+          <h1>Homeland</h1>
+          <h2>以 Rails Engine 的方式的嵌入式论坛组件</h2>
+        </header>
 
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/huacnlee/homeland/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/huacnlee/homeland/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/huacnlee/homeland" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
-        <ul>
-          <li><a href="https://github.com/huacnlee/homeland/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/huacnlee/homeland/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/huacnlee/homeland">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p>A new style forum for tiny community as Rails Engine. You can mount this in you apps.</p>
+        <hr>
 
-<h2>Requrements</h2>
+        <section id="main_content">
+          <h2>
+<a id="homeland" class="anchor" href="#homeland" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Homeland</h2>
+
+<p><a href="https://badge.fury.io/rb/homeland"><img src="https://badge.fury.io/rb/homeland.svg" alt="Gem Version"></a> <a href="https://travis-ci.org/huacnlee/homeland"><img src="https://travis-ci.org/huacnlee/homeland.svg" alt="Build Status"></a> <a href="https://codeclimate.com/github/huacnlee/homeland"><img src="https://codeclimate.com/github/huacnlee/homeland/badges/gpa.svg" alt="Code Climate"></a> <a href="https://codecov.io/github/huacnlee/homeland?branch=master"><img src="https://codecov.io/github/huacnlee/homeland/coverage.svg?branch=master" alt="codecov.io"></a></p>
+
+<blockquote>
+<p>A new style forum for tiny community as Rails Engine. You can mount this in any of you Rails apps.</p>
+</blockquote>
+
+<p>我们时常可能需要在各类中小型项目中集成用户社区之类的功能，每次当你需要做这个事情的时候都重头设计实现一遍么？ No, that no the Rails way! Rails 教育我们要 DRY!</p>
+
+<p>Homeland 是基于 Rails Engine 实现的论坛社区 Gem，用于快速开发，类似 Devise 给我们解决账号体系的方案一样。它包含数据库、Model、Controller、Views 以及 UI 细节的完整实现，你只需简单几行就能快速在你的现有项目上面集成起来。</p>
+
+<h2>
+<a id="功能列表" class="anchor" href="#%E5%8A%9F%E8%83%BD%E5%88%97%E8%A1%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>功能列表</h2>
 
 <ul>
-<li>Rails 3.1</li>
-<li>Mongoid 2.4.x or 3.0.0.rc</li>
-<li>rails_autolink</li>
-</ul><h2>Install</h2>
+<li>分类管理</li>
+<li>话题发布，管理</li>
+<li>回帖</li>
+</ul>
+
+<h2>
+<a id="系统依赖" class="anchor" href="#%E7%B3%BB%E7%BB%9F%E4%BE%9D%E8%B5%96" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>系统依赖</h2>
+
+<p>由于内部包含较多复杂功能，Homeland 不得不需要依赖一些三方库，Homeland 尽可能的选用 Ruby 社区流行的 Gem，保持较小的版本依赖。</p>
+
+<p>建议你使用的时候选择目前 <code>homeland.gemspec</code> 里面描述的最佳的三方库版本号。</p>
+
+<h3>
+<a id="下面是几个基本的" class="anchor" href="#%E4%B8%8B%E9%9D%A2%E6%98%AF%E5%87%A0%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%9A%84" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>下面是几个基本的</h3>
+
+<ul>
+<li>Rails 4.2.x +</li>
+<li>ActiveRecord 4.2.x +</li>
+<li>Bootstrap 4 Alpha (当然如果你重写 View 可以不管它)</li>
+</ul>
+
+<h2>
+<a id="安装" class="anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>安装</h2>
+
+<p>仅仅需要几步，就能集成到你的任何应用（当然我说的是 Rails + ActiveRecord 的！）。</p>
+
+<blockquote>
+<p>[提示]: Homeland 的默认配置是增对 Devise 设计的，你可以从配置文件里面看到，很多参数都是 Devise 的默认值。所以我建议大家尽可能的使用 Devise 来配合（如果情况允许的话），否则你需要实现一些必要的参数，详见后面的配置文件说明。</p>
+</blockquote>
 
 <ol>
-<li>
-<p>in you Gemfile:</p>
+<li>修改 Gemfile 增加:</li>
+</ol>
 
-<div class="highlight"><pre><span class="n">gem</span> <span class="s2">"homeland"</span>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"># Gemfile</span>
+<span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">"</span>homeland<span class="pl-pds">"</span></span>
+<span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>font-awesome-sass-rails<span class="pl-pds">'</span></span>
+<span class="pl-c"># 如果你用其他 markup 可以不用依赖 github-markup</span>
+<span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>github-markup<span class="pl-pds">'</span></span></pre></div>
+
+<p>然后直接 <code>bundle install</code> 安装好.</p>
+
+<ol>
+<li>生成 Homeland 的基本配置文件：</li>
+</ol>
+
+<div class="highlight highlight-source-shell"><pre>$ rails g homeland:install</pre></div>
+
+<ol>
+<li>在 routes.rb 里面 mount Homeland:</li>
+</ol>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"># config/routes.rb</span>
+mount <span class="pl-c1">Homeland</span>::<span class="pl-c1">Engine</span>, <span class="pl-c1">at:</span> <span class="pl-s"><span class="pl-pds">"</span>/homeland<span class="pl-pds">"</span></span></pre></div>
+
+<ol>
+<li>自定义配置</li>
+</ol>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"># config/initializes/homeland.rb</span>
+<span class="pl-c"># Homeland Config</span>
+<span class="pl-c1">Homeland</span>.configure <span class="pl-k">do</span>
+  <span class="pl-c"># 正文格式化方式, [:markdown, :plain, :html], 默认: :markdown</span>
+  <span class="pl-c"># self.markup = :markdown</span>
+
+  <span class="pl-c"># 应用名称</span>
+  <span class="pl-c"># self.app_name = 'Homeland'</span>
+
+  <span class="pl-c"># 分页每页条数</span>
+  <span class="pl-c"># self.per_page = 32</span>
+
+  <span class="pl-c"># 重要！用户 Model 的 Model 名称, 默认: 'User'</span>
+  <span class="pl-c"># self.user_class = 'User'</span>
+
+  <span class="pl-c"># 在 User model 里面表示用户姓名、昵称的函数名称。</span>
+  <span class="pl-c"># 用于 Homeland 页面显示发帖回帖人名称, 默认: 'name'</span>
+  <span class="pl-c"># 例如:</span>
+  <span class="pl-c"># class User</span>
+  <span class="pl-c">#   def name</span>
+  <span class="pl-c">#     self.email.split('@').first</span>
+  <span class="pl-c">#   end</span>
+  <span class="pl-c"># end</span>
+  <span class="pl-c"># self.user_name_method = 'name'</span>
+
+  <span class="pl-c"># 在 User model 里面，用户头像 URL 的函数名称，默认: nil</span>
+  <span class="pl-c"># 当这个参数 nil 的时候，我们会用一个默认头像在页面上显示</span>
+  <span class="pl-c"># 关于尺寸，请给至少 64x64 以上</span>
+  <span class="pl-c"># self.user_avatar_url_method = nil</span>
+
+  <span class="pl-c"># 在 User model 里面，检测用户是否有 Homeland 管理权限的函数，默认: 'admin?'</span>
+  <span class="pl-c"># 此函数目的是为了告诉 Homeland，此用户是否可以管理论坛的回帖发帖，请返回 true, false</span>
+  <span class="pl-c"># self.user_admin_method = 'admin?'</span>
+
+  <span class="pl-c"># 在 User model 里面提供用户个人页面 URL（用于页面上点击用户名、头像的目标页面）</span>
+  <span class="pl-c"># 默认: 'profile_url'</span>
+  <span class="pl-c"># self.user_profile_url_method = 'profile_url'</span>
+
+  <span class="pl-c"># 在 Controller 里面，检查限制必须登录的函数（参见 Devise 的 authenticate_user! 方法）</span>
+  <span class="pl-c"># 默认: 'authenticate_user!'</span>
+  <span class="pl-c"># 此方法要求检查用户是否登录，未登录跳转到登录页面</span>
+  <span class="pl-c"># self.authenticate_user_method = 'authenticate_user!'</span>
+
+  <span class="pl-c"># 在 Controller 里面，获取当前用户对象的函数（参加 Devise 的 current_user 方法)</span>
+  <span class="pl-c"># 默认: 'current_user'</span>
+  <span class="pl-c"># 要求这个函数返回一个 User 对象</span>
+  <span class="pl-c"># self.current_user_method = 'current_user'</span>
+<span class="pl-k">end</span>
 </pre></div>
-</li>
-<li>
-<p>Install thought this commands:</p>
 
-<div class="highlight"><pre>rails g homeland:install
-</pre></div>
-</li>
-<li>
-<p>change you application.html.erb</p>
+<h3>
+<a id="如果你有更高级的需要可以直接生成出-homeland-的-model-controller-view-文件然后按自己的需要定制" class="anchor" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%9C%89%E6%9B%B4%E9%AB%98%E7%BA%A7%E7%9A%84%E9%9C%80%E8%A6%81%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%94%9F%E6%88%90%E5%87%BA-homeland-%E7%9A%84-model-controller-view-%E6%96%87%E4%BB%B6%E7%84%B6%E5%90%8E%E6%8C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9C%80%E8%A6%81%E5%AE%9A%E5%88%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>如果你有更高级的需要，可以直接生成出 Homeland 的 Model, Controller, View 文件，然后按自己的需要定制：</h3>
 
-<p>before:</p>
+<div class="highlight highlight-source-shell"><pre>$ rails g homeland:models
+$ rails g homeland:controllers
+$ rails g homeland:views</pre></div>
 
-<div class="highlight"><pre><span class="x"> </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">"Home"</span><span class="p">,</span> <span class="n">root_path</span> <span class="cp">%&gt;</span><span class="x"></span>
-<span class="x"> </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">"Posts"</span><span class="p">,</span> <span class="n">posts_path</span> <span class="cp">%&gt;</span><span class="x"></span>
-</pre></div>
+<p>你也可以通过下面的命令生成默认的 I18n 文件</p>
 
-<p>after:</p>
+<div class="highlight highlight-source-shell"><pre>$ rails g homeland:i18n</pre></div>
 
-<div class="highlight"><pre><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">"Home"</span><span class="p">,</span> <span class="n">main_app</span><span class="o">.</span><span class="n">root_path</span> <span class="cp">%&gt;</span><span class="x"></span>
-<span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">"Home"</span><span class="p">,</span> <span class="n">main_app</span><span class="o">.</span><span class="n">posts_path</span> <span class="cp">%&gt;</span><span class="x"></span>
-</pre></div>
-</li>
-<li>
-<p>Change you routes.rb to add this:</p>
+<h2>
+<a id="实现自己的文章内容格式化" class="anchor" href="#%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9%E6%A0%BC%E5%BC%8F%E5%8C%96" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>实现自己的文章内容格式化</h2>
 
-<div class="highlight"><pre><span class="n">mount</span> <span class="no">Homeland</span><span class="o">::</span><span class="no">Engine</span><span class="p">,</span> <span class="ss">:at</span> <span class="o">=&gt;</span> <span class="s2">"/bbs"</span>
-</pre></div>
-</li>
-</ol><h2>Generate views to custom</h2>
+<p>Homeland 默认提供: [:markdown, :simple, :html] 几种可选的内容格式化方式，但某些时候你可能会有更多的需求，需要按自己的需要定制。</p>
 
-<div class="highlight"><pre>rails g homeland:views
-</pre></div>
+<p>Homeland 提供的方式让你达到这个目的。</p>
 
-<h2>How to test Homeland</h2>
+<p>你需要在 <code>Homeland::Markup</code> 命名空间下面实现一个新的自定义类，并继承 <code>Homeland::Markup::Base</code>，实现 <code>render</code> 函数，例如：</p>
 
-<div class="highlight"><pre><span class="nv">$ </span>bundle install
-<span class="nv">$ </span><span class="nb">cd </span>spec/dummy
-<span class="nv">$ </span>rails s
-INFO  WEBrick 1.3.1
-INFO  ruby 1.9.3 <span class="o">(</span>2012-04-20<span class="o">)</span> <span class="o">[</span>x86_64-darwin11.4.0<span class="o">]</span>
-INFO  WEBrick::HTTPServer#start: <span class="nv">pid</span><span class="o">=</span>9720 <span class="nv">port</span><span class="o">=</span>3000
-</pre></div>
+<p>新建文件 lib/homeland/markup/ruby_china.rb</p>
 
-<h2>Demo App</h2>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">module</span> <span class="pl-en">Homeland</span>
+  <span class="pl-k">module</span> <span class="pl-en">Markup</span>
+    <span class="pl-k">class</span> <span class="pl-en">RubyChina<span class="pl-e"> &lt; Base</span></span>
+      <span class="pl-k">class</span> <span class="pl-en"><span class="pl-smi">&lt;&lt; self</span></span>
+        <span class="pl-k">def</span> <span class="pl-en">render</span>(<span class="pl-smi">raw</span>)
+          <span class="pl-c"># 在这里编写你的详细转换实现</span>
+          <span class="pl-c1">YouCustomRender</span>.render(raw)
+        <span class="pl-k">end</span>
+      <span class="pl-k">end</span>
+    <span class="pl-k">end</span>
+  <span class="pl-k">end</span>
+<span class="pl-k">end</span></pre></div>
 
-<ul>
-<li><a href="http://720p.so/bbs">http://720p.so/bbs</a></li>
-</ul><hr><p>Thanks <a href="http://www.v2ex.com/?r=huacnlee">V2EX</a> forum idea.
-A new style forum for tiny community as Rails Engine. You can mount this in you apps.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/huacnlee">huacnlee</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
+<p>需改 config/initializes/homeland.rb</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c1">Homeland</span>.configure <span class="pl-k">do</span>
+  <span class="pl-v">self</span>.markup <span class="pl-k">=</span> <span class="pl-c1">:ruby_china</span>
+<span class="pl-k">end</span></pre></div>
+
+<p>然后，Homeland 在转换格式的时候，就会用你的自定义 Markup 来处理了。</p>
+
+<h2>
+<a id="demo-app" class="anchor" href="#demo-app" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo App</h2>
+
+<p><img src="https://cloud.githubusercontent.com/assets/5518/14011062/4ca58542-f1d6-11e5-97bb-e43e67e4686e.png" alt="2016-03-24 15 27 27">
+<img src="https://cloud.githubusercontent.com/assets/5518/14011063/4caa8326-f1d6-11e5-9161-ef93afe07465.png" alt="2016-03-24 15 27 45">
+<img src="https://cloud.githubusercontent.com/assets/5518/14011061/4ca57bf6-f1d6-11e5-8343-291d7e92bf3c.png" alt="2016-03-24 15 27 49"></p>
+        </section>
+
+        <footer>
+          Homeland is maintained by <a href="https://github.com/huacnlee">huacnlee</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -111,5 +224,7 @@ A new style forum for tiny community as Rails Engine. You can mount this in you 
             } catch(err) {}
           </script>
 
+      </div>
+    </div>
   </body>
 </html>
