@@ -4,19 +4,19 @@ ruby '2.3.0'
 
 gemspec
 
-gem 'rails', '5.0.0.beta3'
-gem 'sass-rails'
-gem 'uglifier'
-gem 'coffee-rails'
+gem 'rails', '5.0.0'
+gem 'sass-rails', '>= 5.0.5'
+gem 'uglifier', '>= 2.7.2'
+gem 'coffee-rails', '>= 4.1.1'
 gem 'github-markup'
-gem 'devise', '4.0.0.rc2'
-gem 'jquery-rails'
+gem 'devise', '4.0.0'
+gem 'jquery-rails', '>= 4.1.1'
 gem 'mysql2'
 gem 'puma'
 
 group :development, :test do
   gem 'minitest'
   gem 'factory_girl'
-  gem 'simplecov'
-  gem 'codecov'
+  gem 'simplecov', '>= 0.12.0'
+  gem 'codecov', '>= 0.1.4'
 end
