@@ -12,7 +12,7 @@ gem 'github-markup'
 gem 'devise', '4.0.0.rc2'
 gem 'jquery-rails'
 gem 'mysql2'
-gem 'puma'
+gem 'puma', '>= 3.12.6'
 
 group :development, :test do
   gem 'minitest'
