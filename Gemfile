@@ -4,13 +4,13 @@ ruby '2.3.0'
 
 gemspec
 
-gem 'rails', '5.0.0.beta3'
-gem 'sass-rails'
+gem 'rails', '5.2.4.4'
+gem 'sass-rails', '>= 5.0.5'
 gem 'uglifier'
-gem 'coffee-rails'
+gem 'coffee-rails', '>= 4.2.2'
 gem 'github-markup'
-gem 'devise', '4.0.0.rc2'
-gem 'jquery-rails'
+gem 'devise', '4.4.2'
+gem 'jquery-rails', '>= 4.1.1'
 gem 'mysql2'
 gem 'puma'
 
